@@ -1,0 +1,29 @@
+body {
+  background-color: #e5e5e5;
+}
+
+.form__wrapper {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.form__container {
+  margin: 4rem;
+  width: 440px;
+  height: 535px;
+  background-color: #fff;
+  z-index: 10;
+  box-shadow: 10px 10px 60px #e2e7ff;
+  border-radius: 0px 50px 50px 50px;
+}
+
+.dots-ico {
+  position: absolute;
+  right: 32px;
+  top: 50px;
+  z-index: 1;
+  width: 102px;
+  height: 118px;
+  background-image: url(./images/dotes.png);
+}
