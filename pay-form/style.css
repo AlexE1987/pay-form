@@ -1,21 +1,63 @@
-body {
-  background-color: #e5e5e5;
+@font-face {
+  font-family: 'Gilroy-Regular';
+  src: url('./fonts/fonts/gilroy-regular.eot'); /* IE 9 Compatibility Mode */
+  src: url('./fonts/fonts/gilroy-regular.eot?#iefix') format('embedded-opentype'),
+    /* IE < 9 */ url('./fonts/fonts/gilroy-regular.woff') format('woff2'),
+    /* Super Modern Browsers */ url('./fonts/fonts/gilroy-regular.woff') format('woff'),
+    /* Firefox >= 3.6, any other modern browser */ url('./fonts/fonts/gilroy-regular.ttf')
+      format('truetype'),
+    /* Safari, Android, iOS */ url('../fonts/gilroy-regular.svg#gilroy-regular') format('svg'); /* Chrome < 4, Legacy iOS */
+}
+* {
+  margin: 0;
+  padding: 0;
 }
 
-.form__wrapper {
+body {
+  background-color: #e5e5e5;
+  font-family: 'Gilroy-Regular';
+}
+
+.info__wrapper {
   position: relative;
   display: flex;
   justify-content: flex-end;
 }
 
-.form__container {
+.info__container {
   margin: 4rem;
   width: 440px;
-  height: 535px;
+  min-height: 535px;
   background-color: #fff;
   z-index: 10;
   box-shadow: 10px 10px 60px #e2e7ff;
   border-radius: 0px 50px 50px 50px;
+}
+
+.info-title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 134.9%;
+  color: #1c154e;
+}
+
+.info-title_product {
+}
+
+.info-desc {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 145%;
+  color: #1c154e;
+  opacity: 0.8;
+}
+.form {
+  height: 464px;
+  margin: 35px 35px 35px 35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .dots-ico {
@@ -26,4 +68,50 @@ body {
   width: 102px;
   height: 118px;
   background-image: url(./images/dotes.png);
+}
+
+.input {
+  font-size: 16px;
+  line-height: 19px;
+  color: #d0d3e2;
+  border: none;
+  border-bottom: 1.5px solid #e1e3ee;
+  outline-color: #7494e0;
+}
+
+::placeholder {
+  color: #d0d3e2;
+  font-size: 16px;
+}
+
+.btn {
+  height: 45px;
+  outline-color: #7494e0;
+  color: #fff;
+  background: #23c967;
+  border: 0;
+  border-radius: 15px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 22px;
+  color: #fff;
+}
+
+.btn_add {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  color: #23c967;
+  border: 0;
+  background: transparent;
+  text-align: start;
+}
+
+.secure-desc {
+  text-align: center;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  color: #afb4cc;
 }
