@@ -13,7 +13,7 @@
     <div class="dots-ico"></div>
     <div class="info__container">
 
-      <form class="form form_info" action="">
+      <form class="form form_info" id="form_info" action="">
           <h2 class="info-title">
             Info
           </h2>
@@ -21,6 +21,7 @@
             Enter your email address
           </p>
           <input class="input input_email" type="email" name="" id="" placeholder="team@checkforpatent.com">
+
           <h2 class="info-title info-title_product">
             Product 1
           </h2>
@@ -28,11 +29,13 @@
             Enter main keyword for the product
           </p>
           <input class="input input_key" type="text" placeholder="for example, sylicon wine cup">
+
           <p class="info-desc">
             Enter link to the similar product as a reference
           </p>
           <input class="input input_link" type="text" placeholder="https://...">
-          <button class="btn btn_add">
+          
+          <button class="btn btn_add" type="button">
             Add more products 
             <img src="./images/add-ico.svg" alt="Add Product"> 
           </button>
@@ -48,8 +51,77 @@
           </p>
         </form>
 
+      <form class="form form_add-product " id="form_add-product" action="">
+          <h2 class="info-title">
+            Adding more products
+          </h2>
+          <p class="info-desc">
+            The more items you check, the better the price.
+          </p>
+
+          <div class="product-chose__container">
+            <!-- <div class="radio-item">
+                <input type="radio" id="ritema1" name="ritem" value="ropt1">
+                <label for="ritema1">
+                   <div class="discount__container">
+                    <h4 class="discount-title">5 products for 80 usd / 16$ for each</h4>
+                    <p class="discount-safe">You safe 36% on each patent check</p>
+                  </div>
+                </label>
+               
+            </div>
+            
+            <div class="radio-item">
+                <input type="radio" id="ritema2" name="ritem" value="ropt1">
+                <label for="ritema2">
+                  <div class="discount__container">
+                    <h4 class="discount-title">4 products for 72 usd / 18$ for each</h4>
+                    <p class="discount-safe">You safe 36% on each patent check</p>
+                  </div>
+                </label>
+                
+            </div>
+            
+            <div class="radio-item">
+                <input type="radio" id="ritema3" name="ritem" value="ropt1">
+                <label for="ritema3">
+                  <div class="discount__container">
+                    <h4 class="discount-title">3 products for 60 usd / 20$ for each</h4>
+                    <p class="discount-safe">You safe 36% on each patent check</p>
+                  </div>
+                </label>
+                
+            </div>
+            
+            <div class="radio-item">
+                <input type="radio" id="ritema4" name="ritem" value="ropt1">
+                <label for="ritema4">
+                  <div class="discount__container">
+                    <h4 class="discount-title">2 products for 44 usd / 22$ for each</h4>
+                    <p class="discount-safe">You safe 36% on each patent check</p>
+                  </div>
+                </label>
+            </div> -->
+            
+            <!-- <div class="radio-item">
+                <input type="radio" id="ritemb5" name="ritem" value="ropt2">
+                <label for="ritemb5">
+                  <div class="discount__container">
+                    <h4 class="discount-title discount-title_1">1 product for 24.99 usd</h4>
+                  </div>
+                </label>
+            </div> -->
+          </div> 
+          
+          <button class="btn btn_submit" type="button">
+            Continue
+          </button>
+
+        </form>
     </div>
   </div>
-    <script src="./script.js"></script>
+
+  <script src="./script.js"></script>
+  <script src="./product.js"></script>
 </body>
 </html>
