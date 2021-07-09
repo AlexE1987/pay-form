@@ -9,11 +9,13 @@
   <title>Document</title>
 </head>
 <body>
-  <div class="info__wrapper">
+  <div class="main__wrapper">
     <div class="dots-ico"></div>
-    <div class="info__container">
 
+    <div class="info__wrapper">
       <form class="form form_info" id="form_info" action="">
+        <div class="info__container">
+
           <h2 class="info-title">
             Info
           </h2>
@@ -22,18 +24,25 @@
           </p>
           <input class="input input_email" type="email" name="" id="" placeholder="team@checkforpatent.com">
 
-          <h2 class="info-title info-title_product">
-            Product 1
-          </h2>
-          <p class="info-desc">
-            Enter main keyword for the product
-          </p>
-          <input class="input input_key" type="text" placeholder="for example, sylicon wine cup">
 
-          <p class="info-desc">
-            Enter link to the similar product as a reference
-          </p>
-          <input class="input input_link" type="text" placeholder="https://...">
+          <ul class="info__list">
+
+            <li class="info__list-item">
+              <h2 class="info-title info-title_product">
+                Product 1
+                </h2>
+                <p class="info-desc">
+                Enter main keyword for the product
+                </p>
+                <input class="input input_key" type="text" placeholder="for example, sylicon wine cup">
+    
+                <p class="info-desc">
+                  Enter link to the similar product as a reference
+                </p>
+                <input class="input input_link" type="text" placeholder="https://...">
+            </li>
+
+          </ul>
           
           <button class="btn btn_add" type="button">
             Add more products 
@@ -42,6 +51,9 @@
           <p class="info-desc">
             We offer discount up to 36% for multiple checks
           </p>
+
+        </div>
+
           <button class="btn btn_submit" type="submit">
             Submit and Pay 24.99 USD
           </button>
@@ -51,7 +63,7 @@
           </p>
         </form>
 
-      <form class="form form_add-product " id="form_add-product" action="">
+      <form class="form form_add-product hide" id="form_add-product" action="">
           <h2 class="info-title">
             Adding more products
           </h2>
@@ -59,61 +71,59 @@
             The more items you check, the better the price.
           </p>
 
-          <div class="product-chose__container">
-            <!-- <div class="radio-item">
-                <input type="radio" id="ritema1" name="ritem" value="ropt1">
-                <label for="ritema1">
-                   <div class="discount__container">
-                    <h4 class="discount-title">5 products for 80 usd / 16$ for each</h4>
-                    <p class="discount-safe">You safe 36% on each patent check</p>
-                  </div>
-                </label>
-               
-            </div>
+          <ul class="product__list-select">
             
-            <div class="radio-item">
-                <input type="radio" id="ritema2" name="ritem" value="ropt1">
-                <label for="ritema2">
-                  <div class="discount__container">
-                    <h4 class="discount-title">4 products for 72 usd / 18$ for each</h4>
-                    <p class="discount-safe">You safe 36% on each patent check</p>
-                  </div>
-                </label>
-                
-            </div>
+            <li class="radio-item">
+              <input class="input-radio" type="radio" data-count="5" id="ritema5"  name="ritem" value="80">
+              <label for="ritema5">
+                <div class="discount__container">
+                  <h4 class="discount-title">5 products for 80 usd / 16$ for each</h4>
+                  <p class="discount-safe">You safe 36% on each patent check</p>
+                </div>
+            </label>
+            </li>
             
-            <div class="radio-item">
-                <input type="radio" id="ritema3" name="ritem" value="ropt1">
-                <label for="ritema3">
-                  <div class="discount__container">
-                    <h4 class="discount-title">3 products for 60 usd / 20$ for each</h4>
-                    <p class="discount-safe">You safe 36% on each patent check</p>
-                  </div>
-                </label>
-                
-            </div>
-            
-            <div class="radio-item">
-                <input type="radio" id="ritema4" name="ritem" value="ropt1">
-                <label for="ritema4">
-                  <div class="discount__container">
-                    <h4 class="discount-title">2 products for 44 usd / 22$ for each</h4>
-                    <p class="discount-safe">You safe 36% on each patent check</p>
-                  </div>
-                </label>
-            </div> -->
-            
-            <!-- <div class="radio-item">
-                <input type="radio" id="ritemb5" name="ritem" value="ropt2">
-                <label for="ritemb5">
-                  <div class="discount__container">
-                    <h4 class="discount-title discount-title_1">1 product for 24.99 usd</h4>
-                  </div>
-                </label>
-            </div> -->
-          </div> 
+            <li class="radio-item">
+              <input class="input-radio" type="radio" data-count="4" id="ritema4" name="ritem" value="72">
+              <label for="ritema4">
+                <div class="discount__container">
+                  <h4 class="discount-title">4 products for 72 usd / 18$ for each</h4>
+                  <p class="discount-safe">You safe 28% on each patent check</p>
+                </div>
+            </label>
+            </li>
           
-          <button class="btn btn_submit" type="button">
+            <li class="radio-item">
+              <input class="input-radio" type="radio" data-count="3" id="ritema3" name="ritem" value="60">
+              <label for="ritema3">
+                <div class="discount__container">
+                  <h4 class="discount-title">3 products for 60 usd / 20$ for each</h4>
+                  <p class="discount-safe">You safe 20% on each patent check</p>
+                </div>
+            </label>
+            </li>
+          
+            <li class="radio-item">
+              <input class="input-radio" type="radio" data-count="2" id="ritema2" name="ritem" value="44">
+              <label for="ritema2">
+                <div class="discount__container">
+                  <h4 class="discount-title">2 products for 44 usd / 22$ for each</h4>
+                  <p class="discount-safe">You safe 12% on each patent check</p>
+                </div>
+            </label>
+            </li>
+          
+            <li class="radio-item">
+              <input class="input-radio" type="radio" data-count="1" id="ritema1" name="ritem" value="24.99">
+              <label for="ritema1">
+                <div class="discount__container">
+                  <h4 class="discount-title">1 product for 24.99 usd</h4>
+                </div>
+            </label>
+          </li>
+          </ul> 
+          
+          <button class="btn btn_continue" type="button">
             Continue
           </button>
 
