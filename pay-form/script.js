@@ -2,6 +2,7 @@ const productListSelect = document.querySelector('.product__list-select');
 const infoList = document.querySelector('.info__list');
 const btnContinue = document.querySelector('.btn_continue');
 const btnSubmite = document.querySelector('.btn_submit');
+const discountSafe = document.querySelectorAll('.discount-safe');
 
 const inputsRadio = document.querySelectorAll('input[type="radio"]');
 
@@ -22,10 +23,25 @@ const addInfoElements = (count) => {
   }
 };
 
+const removeActive = () => {
+  discountSafe.forEach((e) => {
+    if (e.classList.contains('discount-safe_active')) {
+      e.classList.remove('discount-safe_active');
+    }
+  });
+};
+
 for (let i = 0; i < inputsRadio.length; i++) {
-  inputsRadio[i].addEventListener('click', function () {
+  inputsRadio[i].addEventListener('click', function (e) {
     let count = this.dataset.count;
     let costSumm = this.value;
+
+    removeActive();
+
+    let elementActive = e.target.parentElement.querySelector('.discount-safe');
+    elementActive.classList.toggle('discount-safe_active');
+
+    console.log('123', e.target.parentElement.querySelector('p'));
 
     producInfoUpdate.length = 0;
     addInfoElements(count, costSumm);
@@ -70,7 +86,8 @@ const btnSubmitInfo = () => {
   let quantityElements = infoList.querySelectorAll('li').length;
   switch (quantityElements) {
     case 0:
-      btnSubmite.innerText = 'Please add product';
+      btnSubmite.innerText = 'Please add products';
+      // btnSubmite.style = 'cursor: not-allowed';
       break;
     case 1:
       btnSubmite.innerText = 'Submit and Pay 24.99 USD';
@@ -92,7 +109,8 @@ const btnSubmitInfo = () => {
 
 infoList.addEventListener('click', (e) => {
   if (e.target.classList.contains('image-remove')) {
-    e.target.parentElement.remove();
+    let lastElement = e.target.parentElement.parentElement.lastElementChild;
+    lastElement.remove();
     btnSubmitInfo();
   }
 });
