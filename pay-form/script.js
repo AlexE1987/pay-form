@@ -1,16 +1,16 @@
 const productListSelect = document.querySelector('.product__list-select');
 const infoList = document.querySelector('.info__list');
+const formInfo = document.querySelector('.form_info');
+const formAddProduct = document.querySelector('.form_add-product');
+
 const btnContinue = document.querySelector('.btn_continue');
 const btnSubmite = document.querySelector('.btn_submit');
-const discountSafe = document.querySelectorAll('.discount-safe');
+const btnAdd = document.querySelector('.btn_add');
 
 const inputsRadio = document.querySelectorAll('input[type="radio"]');
+const discountSafe = document.querySelectorAll('.discount-safe');
 
 const producInfoUpdate = [];
-
-const btnAdd = document.querySelector('.btn_add');
-const formAddProduct = document.querySelector('.form_add-product');
-const formInfo = document.querySelector('.form_info');
 
 btnAdd.addEventListener('click', () => {
   formAddProduct.classList.toggle('hide');
@@ -113,4 +113,9 @@ infoList.addEventListener('click', (e) => {
     lastElement.remove();
     btnSubmitInfo();
   }
+});
+
+btnSubmite.addEventListener('click', () => {
+  btnSubmite.innerText = '';
+  btnSubmite.classList.toggle('btn__loading');
 });
