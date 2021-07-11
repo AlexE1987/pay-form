@@ -2,10 +2,12 @@ const productListSelect = document.querySelector('.product__list-select');
 const infoList = document.querySelector('.info__list');
 const formInfo = document.querySelector('.form_info');
 const formAddProduct = document.querySelector('.form_add-product');
+const containerSuccess = document.querySelector('.info__container-success');
 
 const btnContinue = document.querySelector('.btn_continue');
-const btnSubmite = document.querySelector('.btn_submit');
 const btnAdd = document.querySelector('.btn_add');
+const btnSubmite = document.querySelector('.btn_submit');
+const btnBack = document.querySelector('.btn_back');
 
 const inputsRadio = document.querySelectorAll('input[type="radio"]');
 const discountSafe = document.querySelectorAll('.discount-safe');
@@ -115,7 +117,13 @@ infoList.addEventListener('click', (e) => {
   }
 });
 
-btnSubmite.addEventListener('click', () => {
+btnSubmite.addEventListener('click', (e) => {
   btnSubmite.innerText = '';
   btnSubmite.classList.toggle('btn__loading');
+});
+
+formInfo.addEventListener('submit', (e) => {
+  e.preventDefault();
+  location.href = '/success.html';
+  // location.href = '/error.html';
 });

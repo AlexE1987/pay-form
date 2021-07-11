@@ -19,6 +19,10 @@ body {
   font-family: 'Gilroy-Regular';
 }
 
+a {
+  text-decoration: none;
+}
+
 li {
   list-style: none;
 }
@@ -61,6 +65,10 @@ li {
   flex-direction: column;
   justify-content: space-between;
 }
+
+.info__container_success {
+}
+
 .info-title {
   margin-top: 25px;
   font-weight: 700;
@@ -275,22 +283,11 @@ li {
 
 /* Add product styles start */
 
-.form_add-product {
-}
-
-/* Add product styles end */
-
 .product-choise__container {
   display: flex;
   flex-direction: column;
 }
 
-.discount__container {
-  /* padding-left: 12px; */
-}
-
-.discount-safe {
-}
 .discount-safe_active {
   color: #23c967;
 }
@@ -300,3 +297,42 @@ li {
   line-height: 20px;
   color: #000;
 }
+/* Add product styles end */
+
+/* Pay status styles start */
+
+.img__container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.info__container-success {
+}
+
+.info__container-error {
+}
+.success-pay {
+  width: 157px;
+}
+
+.success-check {
+  position: absolute;
+  top: -14px;
+  right: 93px;
+}
+
+.failed-pay {
+}
+
+.btn_link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn_failed {
+  background-color: #ea717f;
+}
+/* Pay status styles end */

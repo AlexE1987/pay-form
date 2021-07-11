@@ -13,7 +13,7 @@
     <div class="dots-ico"></div>
 
     <div class="info__wrapper">
-      <form class="form form_info" id="form_info" action="">
+      <form class="form form_info" id="form_info" action="#">
         <div class="info__container">
 
           <h2 class="info-title">
@@ -128,10 +128,30 @@
           </button>
 
         </form>
+        <div class="info__container info__container-error form hide">
+
+          <h2 class="info-title">
+            Your payment failed
+          </h2>
+
+          <p class="info-desc">
+            Sorry, but we’ve having trouble processing your payment.
+            You have been not charged for this transaction.
+          </p>
+
+          <div class="img__container">
+            <img class="failed-pay" src="./images/failed-pay-img.png" alt="Successfull pay">
+          </div>
+          
+          <button class="btn btn_failed" type="button">
+            Try to pay again 
+          </button>
+
+        </div>
     </div>
   </div>
 
   <script src="./script.js"></script>
-  <script src="./product.js"></script>
+  <script src="./request.js"></script>
 </body>
 </html>
